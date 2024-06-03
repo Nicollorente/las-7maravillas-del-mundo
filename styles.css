@@ -298,3 +298,46 @@ header a{
     opacity: 0;
   }
 }
+
+
+@media screen and (max-width:768px) {
+  body{
+    grid-template-columns: 1fr;
+    overflow: auto;
+  }
+  .author{
+    width: 600px;
+    position: absolute;
+    margin-top: -75px;
+  }
+.carousel .list .item .content .title{
+  font-size: 40px;
+  width: 300px;
+  margin-top: -20px;
+  margin-left: -5px;
+}
+
+.carousel .list .item .content .topic{
+  width: 400px;
+  font-size: 30px;
+  margin-left: -10px;
+  margin-top: -40px;
+}
+.carousel .list .item .content .des{
+  margin-left: 50px;
+  width: 80%;
+  height: auto;
+  margin-top: -20px;
+  font-size: 16px;
+}
+.arrows{
+  position: absolute;
+  bottom: 150px;
+  right: 10px;
+}
+.thumbnail .item{
+margin-left: 35px;
+}
+
+
+  }
