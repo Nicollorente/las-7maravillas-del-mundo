@@ -300,44 +300,143 @@ header a{
 }
 
 
-@media screen and (max-width:768px) {
-  body{
-    grid-template-columns: 1fr;
-    overflow: auto;
+
+@media screen and (max-width:1200px) {
+  .carousel{
+    width: 100%;
   }
-  .author{
-    width: 600px;
+
+  .carousel .list .item .content .author{
     position: absolute;
-    margin-top: -75px;
+    top: -60px;
+    font-size: 20px;
   }
-.carousel .list .item .content .title{
-  font-size: 40px;
-  width: 300px;
-  margin-top: -20px;
-  margin-left: -5px;
+
+  .carousel .list .item .content .title{
+    width: 100%;
+    font-size: 40px;
+    white-space: nowrap;
+  }
+
+  .carousel .list .item .content .topic{
+    width: 100%;
+    white-space: nowrap;
+    font-size: 35px;
+  }
+
+  .carousel .list .item .content .des{
+    height: 100%;
+
+    margin-left: 20px;
+    font-size: 15px;
+  }
+  .thumbnail .item{
+    width: 150px;
+    padding: 0;
+    margin-left: 15px;
+    position: relative;
+    left: -15px;
+  }
+
+  .arrows{
+    position: relative;
+    top: 250px;
+    right: -770px;
+  }  
+
 }
 
-.carousel .list .item .content .topic{
-  width: 400px;
-  font-size: 30px;
-  margin-left: -10px;
-  margin-top: -40px;
-}
-.carousel .list .item .content .des{
-  margin-left: 50px;
-  width: 80%;
-  height: auto;
-  margin-top: -20px;
-  font-size: 16px;
-}
-.arrows{
-  position: absolute;
-  bottom: 150px;
-  right: 10px;
-}
-.thumbnail .item{
-margin-left: 35px;
-}
 
 
+@media screen and (max-width:800px) {
+
+  .carousel{
+    width: 100%;
+  }
+
+  .carousel .list .item .content .author{
+    position: absolute;
+    top: -60px;
+  }
+
+  .carousel .list .item .content .title{
+    width: 100%;
+    font-size: 25px;
+    white-space: nowrap;
+  }
+
+  .carousel .list .item .content .topic{
+    width: 100%;
+    white-space: nowrap;
+    font-size: 30px;
+  }
+
+  .carousel .list .item .content .des{
+    height: 100%;
+    width: auto;
+    margin-left: 50px;
+    font-size: 15px;
+  }
+  .thumbnail .item{
+    width: 180px;
+    padding: 0;
+    position: relative;
+    left: -15px;
+  }
+
+  .arrows{
+    position: relative;
+    top: 250px;
+    right: -520px;
+  }
+
+  }
+
+  @media screen and (max-width:480px) {
+    .carousel{
+      width: 100%;
+    }
+  
+    .carousel .list .item .content .author{
+      position: absolute;
+      top: 0;
+    }
+
+    .carousel .list .item .content .title{
+      width: 100%;
+      font-size: 20px;
+      white-space: nowrap;
+    }
+
+    .carousel .list .item .content .topic{
+      width: 100%;
+      white-space: nowrap;
+      font-size: 25px;
+    }
+
+    .carousel .list .item .content .des{
+      height: auto;
+      font-size: 15px;
+    }
+
+  .thumbnail{
+    width: 100%;
+    display: flex;
+    position: relative;
+    bottom: -320px;
+    }
+
+    .thumbnail .item{
+      padding: 0;
+      margin:0 60px ;
+    }
+
+    .arrows{
+      position: relative;
+      top: 50px;
+      right: -345px;
+    }
+    #prev{
+      display: none;
+    }
   }
