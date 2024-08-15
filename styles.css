@@ -335,20 +335,20 @@ header a{
     padding: 0;
     margin-left: 15px;
     position: relative;
-    left: -15px;
+    left: 40px;
   }
 
   .arrows{
     position: relative;
-    top: 250px;
-    right: -770px;
+    top: 420px;
+    right: -880px;
   }  
 
 }
 
 
 
-@media screen and (max-width:800px) {
+@media screen and (max-width:768px) {
 
   .carousel{
     width: 100%;
@@ -381,12 +381,12 @@ header a{
     width: 180px;
     padding: 0;
     position: relative;
-    left: -15px;
+    left: -40px;
   }
 
   .arrows{
     position: relative;
-    top: 250px;
+    top: 440px;
     right: -520px;
   }
 
@@ -399,7 +399,7 @@ header a{
   
     .carousel .list .item .content .author{
       position: absolute;
-      top: 0;
+      top: -80px;
     }
 
     .carousel .list .item .content .title{
@@ -416,6 +416,7 @@ header a{
 
     .carousel .list .item .content .des{
       height: auto;
+      width: 80%;
       font-size: 15px;
     }
 
@@ -423,17 +424,20 @@ header a{
     width: 100%;
     display: flex;
     position: relative;
-    bottom: -320px;
+    bottom: -500px;
+    left: 270px;
+    
     }
 
     .thumbnail .item{
       padding: 0;
       margin:0 60px ;
+      width: 160px;
     }
 
     .arrows{
       position: relative;
-      top: 50px;
+      top: 220px;
       right: -345px;
     }
     #prev{
