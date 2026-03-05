@@ -9,20 +9,6 @@ body {
 a {
   text-decoration: none;
 }
-/* header{
-    width: 1140px;
-    max-width: 80%;
-    margin: auto;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-}
-header a{
-    color: #eee;
-    margin-right: 40px;
-} */
 
 
 /* carousel */
@@ -47,7 +33,7 @@ header a{
 .carousel .list .item .content {
   position: absolute;
   top: 15%;
-  width: 1140px;
+  width: 100%;
   max-width: 80%;
   left: 45%;
   transform: translateX(-50%);
@@ -76,16 +62,21 @@ header a{
   position: relative;
   top: 50px;
 }
+
+
 .carousel .list .item .des {
-  position: relative;
-  bottom: -80px;
-  left: -60px;
+  position: absolute;
   font-weight: 900;
-  background-color: rgba(255, 255, 255, 0.267);
-  color: rgb(0, 0, 0);
-  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.397);
+  color: rgb(255, 255, 255);
+  border-radius: 15px;
   font-size: 14px;
   padding: 30px;
+  line-height: 2;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  width: 400px;
+  bottom: -420px;
 }
 
 /* thumbail */
@@ -149,9 +140,11 @@ header a{
 .arrows button:hover {
   background-color: #fff;
   color: #000;
-}
+} 
 
-/* animation */
+
+
+/* animacion */
 .carousel .list .item:nth-child(1) {
   z-index: 1;
 }
@@ -251,7 +244,7 @@ header a{
   }
 }
 
-/* prev click */
+/* BOTON ATRAS  */
 
 .carousel.prev .list .item:nth-child(2) {
   z-index: 2;
@@ -299,148 +292,134 @@ header a{
   }
 }
 
+.box-des .des{
+  position: absolute;
+  left: 0;
+  margin: 0;
+}
 
 
-@media screen and (max-width:1200px) {
-  .carousel{
-    width: 100%;
+    .arrows button{
+      width: 70px;
+      height: 60px;
+      font-size: 30px;
+    }
+
+    body .des{
+      position: absolute;
+      box-sizing: border-box;
+      width: 400px;
+      left: 300px;
+      margin-left: 70px;
+    }
+
+
+    @media screen and (max-width: 992px){
+
+      .carousel .list .item .content{
+      top: 50px;
+    }
+
+    .carousel .list .item .des{
+      font-size: 16px;
+      bottom: -600px;
+      width: 350px;
+      left: 0;
+    }
+
+    .thumbnail{
+      left: 80%;
+      gap: 80px;
+    }
+
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+
+    .carousel .list .item .author{
+      width: 300px;
+    }
+
+    .thumbnail{
+      display: none;
+    }
+
+    .carousel .list .item .content{
+      top: 60px;
+    }
+
+      .carousel .list .item .topic{
+        width: 450px;
+      }
+
+    .carousel .list .item .des{
+      font-size: 16px;
+      bottom: -510px;
+      width: 500px;
+    }
+
+    .arrows button{
+      width: 70px;
+      height: 60px;
+      font-size: 30px;
+    }
+
   }
 
-  .carousel .list .item .content .author{
+
+
+@media screen and (max-width: 480px) {
+
+      .arrows {
+        top: 50px;
+    }
+
+    .carousel .list .item .content {
+      top: 75px;
+}
+
+    .carousel .list .item .des{
+  bottom: -550px;
+  right: 10px;
+  width: 400px;
+  padding: 20px;
+}
+
+    .author{
+      display: none;
+    }
+
+    .thumbnail{
+      display: none;
+    }
+
+  .carousel.prev .list .item:nth-child(2) img {
+    animation: outFrameMobile 0.5s linear forwards !important;
     position: absolute;
-    top: -60px;
-    font-size: 20px;
+    top: 0;
+    left: 0;
   }
 
-  .carousel .list .item .content .title{
-    width: 100%;
-    font-size: 40px;
-    white-space: nowrap;
+  @keyframes outFrameMobile {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0; /* Se desvanece en el lugar sin moverse al fondo */
+    }
   }
 
-  .carousel .list .item .content .topic{
-    width: 100%;
-    white-space: nowrap;
-    font-size: 35px;
+  .thumbnail {
+    display: none !important;
   }
-
-  .carousel .list .item .content .des{
-    height: 100%;
-
-    margin-left: 20px;
-    font-size: 15px;
-  }
-  .thumbnail .item{
-    width: 150px;
-    padding: 0;
-    margin-left: 15px;
-    position: relative;
-    left: 40px;
-  }
-
-  .arrows{
-    position: relative;
-    top: 420px;
-    right: -880px;
-  }  
-
 }
 
 
 
-@media screen and (max-width:768px) {
 
-  .carousel{
-    width: 100%;
-  }
 
-  .carousel .list .item .content .author{
-    position: absolute;
-    top: -60px;
-  }
 
-  .carousel .list .item .content .title{
-    width: 100%;
-    font-size: 25px;
-    white-space: nowrap;
-  }
 
-  .carousel .list .item .content .topic{
-    width: 100%;
-    white-space: nowrap;
-    font-size: 30px;
-  }
 
-  .carousel .list .item .content .des{
-    height: 100%;
-    width: auto;
-    margin-left: 50px;
-    font-size: 15px;
-  }
-  .thumbnail .item{
-    width: 180px;
-    padding: 0;
-    position: relative;
-    left: -40px;
-  }
-
-  .arrows{
-    position: relative;
-    top: 440px;
-    right: -520px;
-  }
-
-  }
-
-  @media screen and (max-width:480px) {
-    .carousel{
-      width: 100%;
-    }
-  
-    .carousel .list .item .content .author{
-      position: absolute;
-      top: -80px;
-    }
-
-    .carousel .list .item .content .title{
-      width: 100%;
-      font-size: 20px;
-      white-space: nowrap;
-    }
-
-    .carousel .list .item .content .topic{
-      width: 100%;
-      white-space: nowrap;
-      font-size: 25px;
-    }
-
-    .carousel .list .item .content .des{
-      height: auto;
-      width: 80%;
-      font-size: 15px;
-    }
-
-  .thumbnail{
-    width: 100%;
-    display: flex;
-    position: relative;
-    bottom: -500px;
-    left: 270px;
-    
-    }
-
-    .thumbnail .item{
-      padding: 0;
-      margin:0 60px ;
-      width: 160px;
-    }
-
-    .arrows{
-      position: relative;
-      top: 220px;
-      right: -345px;
-    }
-    #prev{
-      display: none;
-    }
-  }
